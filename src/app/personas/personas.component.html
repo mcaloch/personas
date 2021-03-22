@@ -1,6 +1,6 @@
 <h1>Personas</h1>
 
-<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+<table mat-table [dataSource]="dataSource" class="table  table-striped mat-elevation-z8">
 
   <ng-container matColumnDef="first">
     <th mat-header-cell *matHeaderCellDef> First </th>
@@ -38,44 +38,44 @@
 </table>
 
 <p>Total:{{total}}</p>
-
+<hr>
 <form [formGroup]="registroForm" (ngSubmit)="onSubmit()">
 <div class="row">
 	<div class="col-md-6">
-	<label>
-	  First:
-	  <input type="text" formControlName="first">
-	</label>
+		<label>
+		  First:
+		  <input type="text" formControlName="first">
+		</label>
 	</div>
 	<div class="col-md-6">
-	<label>
-	  Last:
-	  <input type="text" formControlName="last">
-	</label>
+		<label>
+		  Last:
+		  <input type="text" formControlName="last">
+		</label>
 	</div>
 	<div class="col-md-6">
-	<label>
-	  Email:
-	  <input type="mail" formControlName="email">
-	</label>
+		<label>
+		  Email:
+		  <input type="mail" formControlName="email">
+		</label>
 	</div>
 	<div class="col-md-6">
-	<label>
-	  Address:
-	  <input type="text" formControlName="address">
-	</label>
+		<label>
+		  Address:
+		  <input type="text" formControlName="address">
+		</label>
 	</div>
 	<div class="col-md-6">
-	<label>
-	  Created:
-	  <input type="date" formControlName="created">
-	</label>
+		<label>
+		  Created:
+		  <input type="date" formControlName="created">
+		</label>
 	</div>
 	<div class="col-md-6">
-	<label>
-	  Balance:
-	  <input type="number" formControlName="balance">
-	</label>
+		<label>
+		  Balance:
+		  <input type="number" formControlName="balance">
+		</label>
 	</div>
 	<button type="submit" [disabled]="!registroForm.valid">Enviar</button>
 </div>

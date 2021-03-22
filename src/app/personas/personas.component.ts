@@ -44,18 +44,15 @@ export class PersonasComponent implements OnInit {
   }
 
   getPersonas():void{
-  	console.log("DC");
   	this.personaService.getPersonas().subscribe(dataSource => {
   		this.dataSource = dataSource;
-  		this.total = this.dataSource.length;
   		let dataLocal = this.localStorageService.get("localData");
   		this.dataSource = this.dataSource.concat(dataLocal);
-  		//console.log("$$"+JSON.stringify(dataLocal) );
+  		this.total = this.dataSource.length;
   	});
   }
 
   add(persona: Persona): void {
-    
     this.personaService.addPersona(persona)
       .subscribe(persona => {
         this.dataSource.push(persona);
